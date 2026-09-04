@@ -1,7 +1,5 @@
 CREATE DATABASE ventas_project;
 
-\connect ventas_project;
-
 -- DDL: creación de tablas
 
 CREATE TABLE clientes (
