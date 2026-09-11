@@ -54,3 +54,40 @@ Relaciones principales:
 2. Conectarse a la base de datos `retail_project`.
 3. Abrir el archivo `pre-entrega-modulo4.sql`.
 4. Ejecutar las consultas una por una o ejecutar el script completo.
+
+# Pre-entrega 5: Análisis avanzado de ventas
+
+Este repositorio contiene una consulta SQL avanzada desarrollada en PostgreSQL para analizar el rendimiento mensual de las categorías de productos mediante CTEs, Window Functions y lógica condicional.
+
+## Archivo principal
+
+- `preentrega_analisis_avanzado.sql`
+
+## Objetivo
+
+Generar un reporte de ventas mensuales por categoría que incluya:
+
+- Mes de la venta.
+- Categoría del producto.
+- Venta total mensual.
+- Ranking de la categoría dentro de cada mes.
+- Ventas acumuladas de la categoría a lo largo del tiempo.
+- Comparación de la venta mensual contra el promedio histórico de esa categoría.
+
+## Tablas utilizadas
+
+La consulta utiliza las siguientes tablas del proyecto `retail_project`:
+
+- `ventas`
+- `productos`
+- `categorias`
+
+Relaciones utilizadas:
+
+- `ventas.producto_id` → `productos.producto_id`
+- `productos.categoria_id` → `categorias.categoria_id`
+
+El importe de cada venta se calcula con:
+
+```sql
+cantidad * precio_unitario
